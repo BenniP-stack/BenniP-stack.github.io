@@ -20,7 +20,7 @@ let scene = new ScrollMagic.Scene({
 
 
 //Text animation
-const textAnim = TweenMax.fromTo(text, 2, { opacity: 1 }, { opacity: 0 });
+const textAnim = gsap.fromTo(text, 2, { opacity: 1 }, { opacity: 0 });
 
 let scene2 = new ScrollMagic.Scene({
         duration: 3000,
