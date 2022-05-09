@@ -4,8 +4,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "myFirstFont";
+    src: url("./media/VCR_OSD_MONO_1.ttf");
+}
+
+@font-face {
+    font-family: "courierSTD";
+    src: url("./media/Courier\ Std\ Medium.otf");
+}
+
 body {
-    font-family: sans-serif;
+    background-color: black;
 }
 
 .intro {
@@ -19,11 +29,12 @@ body {
 
 .intro h1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 75%;
+    left: 25%;
+    font-family: "myFirstFont";
     transform: translate(-50%, -50%);
-    font-size: 80px;
-    color: white;
+    font-size: 100px;
+    color: salmon;
 }
 
 section {
@@ -32,6 +43,7 @@ section {
 }
 
 section h1 {
+    font-family: "myFirstFont";
     padding-top: 300px;
     text-align: center;
     font-size: 80px;
@@ -50,9 +62,40 @@ section .row {
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s ease-out;
+    cursor: pointer;
 }
 
 .render.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
+
+.myCallToAction {
+    margin-top: 100px;
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "myFirstFont";
+    font-size: 25px;
+    padding: 26px 76px;
+    text-decoration: none;
+}
+
+.myCallToAction:hover {
+    background-color: white;
+    color: black;
+}
+
+.myCallToAction:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* footer {
+    font-family: "myFirstFont";
+    color: white;
+    background-color: black;
+} */
