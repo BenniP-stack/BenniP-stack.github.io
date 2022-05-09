@@ -37,11 +37,16 @@ section h1 {
     font-size: 80px;
 }
 
+section .row {
+    background-color: lightgrey;
+}
+
 #main {
     background-color: lightgrey;
 }
 
 .render {
+    padding-top: 20vh;
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s ease-out;
