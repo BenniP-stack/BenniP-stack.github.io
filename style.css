@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #ffffff;
 }
 
 @font-face {
@@ -14,10 +15,6 @@
     src: url("./media/Courier\ Std\ Medium.otf");
 }
 
-body {
-    background-color: black;
-}
-
 .intro {
     height: 100vh;
 }
@@ -25,6 +22,7 @@ body {
 .intro video {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .intro h1 {
@@ -35,22 +33,6 @@ body {
     transform: translate(-50%, -50%);
     font-size: 100px;
     color: salmon;
-}
-
-section {
-    height: 100vh;
-    color: black;
-}
-
-section h1 {
-    font-family: "myFirstFont";
-    padding-top: 300px;
-    text-align: center;
-    font-size: 80px;
-}
-
-section .row {
-    background-color: lightgrey;
 }
 
 #main {
@@ -93,9 +75,44 @@ section .row {
     top: 1px;
 }
 
+.container_2 {
+    height: 100vh;
+}
 
-/* footer {
-    font-family: "myFirstFont";
+.container_2 img {
+    width: 100%;
+    position: absolute;
+    height: 110vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main-title {
+    position: absolute;
+    top: 550%;
+    left: 60%;
+    font-size: 6rem;
+    transform: translate(-60%, -30%);
+}
+
+.content {
+    width: 100%;
+    background: rgb(24, 24, 24);
+    min-height: 100vh;
+    z-index: 2;
+    position: absolute;
+}
+
+.content-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.text {
+    padding: 2rem 20rem;
+    font-size: 1.1rem;
     color: white;
-    background-color: black;
-} */
+}

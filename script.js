@@ -11,11 +11,11 @@ const controller = new ScrollMagic.Controller();
 
 //Scenes
 let heroVideo = new ScrollMagic.Scene({
-        duration: 3500,
+        duration: 3400,
         triggerElement: intro,
         triggerHook: 0
     })
-    // .addIndicators()
+    .addIndicators({ name: "VideoScroll", colorEnd: "#000000" })
     .setPin(intro)
     .addTo(controller);
 
@@ -45,8 +45,32 @@ let heroText = new ScrollMagic.Scene({
     .setTween(textAnim)
     .addTo(controller);
 
-let test1 = new ScrollMagic.Scene({
-        triggerElement: '#main'
+//class wechsel animation (text)
+// let test1 = new ScrollMagic.Scene({
+//         triggerElement: '#main'
+//     })
+//     .setClassToggle('.render', 'fade-in')
+//     .addTo(controller);  
+
+//parallax timeline animation
+let timeline = new TimelineMax();
+
+timeline.to(".rock", 5, { y: -300 })
+    .to(".girl", 5, { y: -200 }, "-=5")
+    .fromTo(".bg1", { y: -65 }, { y: 0, duration: 5 }, "-=5")
+    .to(".content", 5, { top: "0%" }, "-=5")
+    .to(".bg1", { height: "100vh" })
+    .to(".girl", { height: "100vh" })
+    .to(".rock", { height: "100vh" })
+    .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
+    .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
+
+let scene = new ScrollMagic.Scene({
+        triggerElement: "section",
+        duration: "250%",
+        triggerHook: 0,
     })
-    .setClassToggle('.render', 'fade-in')
+    .addIndicators({ name: "ParaScroll", colorEnd: "#000000" })
+    .setTween(timeline)
+    .setPin("section")
     .addTo(controller);
