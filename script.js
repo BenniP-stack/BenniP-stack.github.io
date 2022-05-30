@@ -63,7 +63,8 @@ timeline.to(".rock", 5, { y: -300 })
     .to(".girl1", { height: "100vh" })
     .to(".rock", { height: "100vh" })
     .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
-    .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
+    .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 })
+    .fromTo(".footer", { opacity: 0 }, { opacity: 1, duration: 3 });
 
 let scene = new ScrollMagic.Scene({
         triggerElement: "section",
