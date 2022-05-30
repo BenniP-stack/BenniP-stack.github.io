@@ -89,7 +89,7 @@
 
 .main-title {
     position: absolute;
-    top: 550%;
+    top: 50%;
     left: 60%;
     font-size: 6rem;
     transform: translate(-60%, -30%);
@@ -115,4 +115,15 @@
     padding: 2rem 20rem;
     font-size: 1.1rem;
     color: white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    z-index: 3;
 }

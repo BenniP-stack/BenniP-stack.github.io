@@ -56,11 +56,11 @@ let heroText = new ScrollMagic.Scene({
 let timeline = new TimelineMax();
 
 timeline.to(".rock", 5, { y: -300 })
-    .to(".girl", 5, { y: -200 }, "-=5")
+    .to(".girl1", 5, { y: -200 }, "-=5")
     .fromTo(".bg1", { y: -65 }, { y: 0, duration: 5 }, "-=5")
     .to(".content", 5, { top: "0%" }, "-=5")
     .to(".bg1", { height: "100vh" })
-    .to(".girl", { height: "100vh" })
+    .to(".girl1", { height: "100vh" })
     .to(".rock", { height: "100vh" })
     .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
     .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
