@@ -5,6 +5,10 @@
     color: #ffffff;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: "myFirstFont";
     src: url("./media/VCR_OSD_MONO_1.ttf");
@@ -23,6 +27,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+    z-index: -2;
 }
 
 .intro h1 {
@@ -125,5 +130,32 @@
     background-color: black;
     color: white;
     text-align: center;
-    z-index: 3;
+}
+
+.comparisonSection {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.comparisonImage {
+    width: 100%;
+    height: 100%;
+}
+
+.afterImage {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transform: translate(100%, 0px);
+}
+
+.afterImage img {
+    transform: translate(-100%, 0px);
+}
+
+.comparisonImage img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }

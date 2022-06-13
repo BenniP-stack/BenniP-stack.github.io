@@ -15,7 +15,7 @@ let heroVideo = new ScrollMagic.Scene({
         triggerElement: intro,
         triggerHook: 0
     })
-    .addIndicators({ name: "VideoScroll", colorEnd: "#000000" })
+    // .addIndicators({ name: "VideoScroll", colorEnd: "#000000" })
     .setPin(intro)
     .addTo(controller);
 
@@ -64,14 +64,14 @@ timeline.to(".rock", 5, { y: -300 })
     .to(".rock", { height: "100vh" })
     .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
     .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 })
-    .fromTo(".footer", { opacity: 0 }, { opacity: 1, duration: 3 });
+
 
 let scene = new ScrollMagic.Scene({
         triggerElement: "section",
         duration: "250%",
         triggerHook: 0,
     })
-    .addIndicators({ name: "ParaScroll", colorEnd: "#000000" })
+    // .addIndicators({ name: "ParaScroll", colorEnd: "#000000" })
     .setTween(timeline)
     .setPin("section")
     .addTo(controller);
