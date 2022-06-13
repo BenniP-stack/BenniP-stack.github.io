@@ -120,3 +120,18 @@ body {
     position: absolute;
     top: 0;
 }
+
+
+/* ::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 10px;
+} */
