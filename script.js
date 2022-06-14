@@ -1,17 +1,26 @@
-const intro = document.querySelector('.intro');
-const video = intro.querySelector('video');
-const text = intro.querySelector('h1');
+const intro = document.querySelector(".intro");
+const video = intro.querySelector("video");
+const text = intro.querySelector("h1");
+// const vid2Div = document.querySelector(".loop1");
+// const vid2 = vid2Div.querySelector("video");
+
 
 //END SEC
-const section = document.querySelector('section');
-const end = section.querySelector('h1');
+// const section = document.querySelector('section');
+// const end = section.querySelector('h1');
 
 //SCROLL
 const controller = new ScrollMagic.Controller();
 
+//---
+
+let accelAmount = 0.1;
+let scrollpos = 0;
+let delay = 0.01;
+
 //Scenes
 let heroVideo = new ScrollMagic.Scene({
-        duration: 1500,
+        duration: 3500,
         triggerElement: intro,
         triggerHook: 0
     })
@@ -20,10 +29,6 @@ let heroVideo = new ScrollMagic.Scene({
     .addTo(controller);
 
 //Vid Animation
-let accelAmount = 0.1;
-let scrollpos = 0;
-let delay = 0;
-
 heroVideo.on('update', e => {
     scrollpos = e.scrollPos / 1000;
 });
@@ -33,6 +38,26 @@ setInterval(() => {
     video.currentTime = delay;
 }, 33.3); //Framerate "Fix"
 
+//------
+
+// let loopVid = new ScrollMagic.Scene({
+//         duration: 2000,
+//         triggerElement: vid2Div,
+//         triggerHook: 0
+//     })
+//     .addIndicators({ name: 'VideoScroll', colorEnd: '#000000' })
+//     .setPin(vid2Div)
+//     .addTo(controller);
+
+
+// loopVid.on('update', e => {
+//     scrollpos = e.scrollPos / 1000;
+// });
+
+// setInterval(() => {
+//     delay += (scrollpos - delay) * accelAmount;
+//     vid2.currentTime = delay;
+// }, 41.6); //runtime:fps
 
 //Text animation
 const textAnim = gsap.fromTo(text, 2, { opacity: 1 }, { opacity: 0 });

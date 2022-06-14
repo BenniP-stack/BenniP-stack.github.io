@@ -20,10 +20,12 @@ body {
     src: url("./media/Courier\ Std\ Medium.otf");
 }
 
-.intro {
+.intro,
+.loop1 {
     height: 100vh;
 }
 
+.loop1 video,
 .intro video {
     height: 100%;
     width: 100%;
@@ -140,7 +142,8 @@ section {
     height: 100vh;
 }
 
-a {
+
+/* a {
     color: var(--clr-fg);
     text-decoration: none;
 }
@@ -187,4 +190,4 @@ a {
 
 .btn:hover .btn-text {
     color: var(--clr-bg);
-}
+} */
