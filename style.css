@@ -71,6 +71,14 @@ body {
 
 /* scroll insentive */
 
+#bm {
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+    left: 48vw;
+    top: 87%;
+}
+
 
 /* Comparison Swipe */
 

@@ -3,6 +3,7 @@ const video = intro.querySelector("video");
 const text = intro.querySelector("h1");
 const smallTxt = intro.querySelector("p");
 const introImg = intro.querySelector("img");
+const scrollInsentive = intro.querySelector("div");
 // const vid2Div = document.querySelector(".loop1");
 // const vid2 = vid2Div.querySelector("video");
 
@@ -42,6 +43,7 @@ setInterval(() => {
 const textAnim = gsap.fromTo(text, 2, { opacity: 1 }, { opacity: 0 });
 const textAnim2 = gsap.fromTo(smallTxt, 2, { opacity: 1 }, { opacity: 0 });
 const imgAnim = gsap.fromTo(introImg, 2, { opacity: 1 }, { opacity: 0 });
+const scrollInsAnim = gsap.fromTo(scrollInsentive, 2, { opacity: 1 }, { opacity: 0 });
 
 let heroText = new ScrollMagic.Scene({
         duration: 1000,
@@ -67,6 +69,17 @@ let imgScene = new ScrollMagic.Scene({
     .setTween(imgAnim)
     .addTo(controller);
 
+let scrollInsScene = new ScrollMagic.Scene({
+        duration: 1000,
+        triggerElement: intro,
+        triggerHook: 0
+    })
+    .setTween(scrollInsAnim)
+    .addTo(controller);
+
+//TODO Last slide mit info (tl maybe?) call to action button etc.
+//TODO Anpassung auf mobile endgeräte
+
 //parallax timeline animation
 // let timeline = new TimelineMax();
 
@@ -90,3 +103,12 @@ let imgScene = new ScrollMagic.Scene({
 // //     .setTween(timeline)
 // //     .setPin("section")
 // //     .addTo(controller);
+
+// scroll indicator
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById("bm"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "./media/data.json"
+})
